@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20 Gluten-Free Bread Recipes That Actually Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF3E6;
+    --cream-2:#F3E9D6;
+    --ink:#2B2117;
+    --ink-soft:#6B5D4C;
+    --terracotta:#C1652F;
+    --terracotta-dark:#9C4E22;
+    --line:rgba(43,33,23,0.12);
+    --green:#5C7A5A;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:'Inter',sans-serif;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;letter-spacing:-0.01em;margin:0;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- HERO (no price here) ---------- */
+  .hero{
+    min-height:92vh;display:flex;flex-direction:column;justify-content:center;
+    text-align:center;padding:60px 24px 40px;position:relative;
+  }
+  .hero-tag{
+    text-transform:uppercase;font-size:12px;letter-spacing:0.16em;font-weight:700;
+    color:var(--terracotta);margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(30px,7vw,46px);line-height:1.12;margin-bottom:18px;color:var(--ink);}
+  .hero h1 em{font-style:italic;color:var(--terracotta);}
+  .hero p{font-size:17px;color:var(--ink-soft);max-width:460px;margin:0 auto 30px;}
+  .hero-img{
+    border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(43,33,23,0.35);
+    margin:0 auto;max-width:420px;
+  }
+  .scroll-cue{
+    margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:8px;
+    color:var(--ink-soft);font-size:13px;font-weight:600;
+  }
+  .scroll-cue .arrow{
+    width:26px;height:26px;border-right:2px solid var(--terracotta);border-bottom:2px solid var(--terracotta);
+    transform:rotate(45deg);animation:bounce 1.6s infinite;
+  }
+  @keyframes bounce{0%,100%{transform:rotate(45deg) translate(0,0);}50%{transform:rotate(45deg) translate(6px,6px);}}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:64px 0;}
+  .section-tag{
+    text-transform:uppercase;font-size:12px;letter-spacing:0.14em;font-weight:700;
+    color:var(--terracotta);margin-bottom:14px;text-align:center;
+  }
+  .section-title{font-size:clamp(24px,5vw,32px);text-align:center;margin-bottom:16px;}
+  .section-sub{color:var(--ink-soft);text-align:center;max-width:480px;margin:0 auto 40px;font-size:16px;}
+
+  /* ---------- STORY ---------- */
+  .story{background:var(--cream-2);}
+  .story p{font-size:16.5px;color:var(--ink);margin-bottom:18px;}
+  .story .signature{
+    font-family:'Playfair Display',serif;font-style:italic;font-size:19px;
+    color:var(--terracotta-dark);margin-top:28px;
+  }
+  .pain-points{
+    display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 30px;
+  }
+  .pain-chip{
+    background:rgba(193,101,47,0.08);border:1px solid rgba(193,101,47,0.25);
+    color:var(--terracotta-dark);font-size:13.5px;font-weight:600;
+    padding:8px 16px;border-radius:999px;
+  }
+
+  /* ---------- BENEFITS ---------- */
+  .benefits-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px;}
+  .benefit{
+    display:flex;gap:14px;align-items:flex-start;
+    background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;
+  }
+  .benefit .check{
+    width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:2px;
+  }
+  .benefit h4{margin:0 0 4px;font-family:'Inter',sans-serif;font-weight:700;font-size:15.5px;}
+  .benefit p{margin:0;color:var(--ink-soft);font-size:14px;}
+
+  /* ---------- RECIPE PREVIEW ---------- */
+  .recipe-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;
+  }
+  .recipe-card{
+    background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 12px 24px -14px rgba(43,33,23,0.25);
+  }
+  .recipe-card img{height:120px;object-fit:cover;width:100%;}
+  .recipe-card .label{padding:10px 12px;font-size:12.5px;font-weight:700;color:var(--ink);}
+  .recipe-more{
+    grid-column:1/-1;text-align:center;color:var(--ink-soft);font-size:14px;margin-top:6px;
+    font-style:italic;
+  }
+
+  /* ---------- WHAT'S INSIDE LIST ---------- */
+  .inside-list{
+    background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 26px;
+    box-shadow:0 20px 40px -24px rgba(43,33,23,0.2);
+  }
+  .inside-list ul{list-style:none;margin:0;padding:0;}
+  .inside-list li{
+    display:flex;gap:12px;align-items:flex-start;padding:11px 0;
+    border-bottom:1px solid var(--line);font-size:15px;
+  }
+  .inside-list li:last-child{border-bottom:none;}
+  .inside-list li .bullet{color:var(--terracotta);font-size:16px;margin-top:1px;}
+
+  /* ---------- OFFER / PRICE (appears after scrolling) ---------- */
+  .offer{
+    background:linear-gradient(160deg,var(--ink) 0%,#3A2D1E 100%);
+    color:var(--cream);border-radius:24px;padding:44px 30px;text-align:center;
+    box-shadow:0 30px 60px -20px rgba(43,33,23,0.5);
+  }
+  .offer .section-tag{color:#E9C99B;}
+  .offer h2{color:var(--cream);font-size:clamp(24px,5vw,30px);margin-bottom:14px;}
+  .offer p.offer-sub{color:#D8C9B4;font-size:15px;max-width:420px;margin:0 auto 26px;}
+  .price-row{display:flex;align-items:baseline;justify-content:center;gap:12px;margin-bottom:6px;}
+  .price-old{font-size:20px;color:#B0A08A;text-decoration:line-through;}
+  .price-new{font-size:44px;font-family:'Playfair Display',serif;font-weight:700;color:#F2CD8F;}
+  .price-note{font-size:13px;color:#B0A08A;margin-bottom:28px;}
+  .cta-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    width:100%;max-width:360px;
+    background:linear-gradient(180deg,#F2CD8F,var(--terracotta));
+    color:#2B2117;border:none;border-radius:999px;padding:18px 28px;
+    font-weight:700;font-size:16.5px;cursor:pointer;text-decoration:none;
+    box-shadow:0 16px 32px -10px rgba(242,205,143,0.4);
+    transition:transform .15s ease;
+  }
+  .cta-btn:active{transform:scale(0.97);}
+  .guarantee{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    margin-top:20px;color:#B0A08A;font-size:12.5px;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line);padding:18px 0;}
+  .faq-item h4{font-size:15.5px;margin:0 0 6px;font-family:'Inter',sans-serif;font-weight:700;}
+  .faq-item p{margin:0;color:var(--ink-soft);font-size:14.5px;}
+
+  footer{text-align:center;padding:50px 24px 60px;color:var(--ink-soft);font-size:12.5px;}
+
+  @media(min-width:600px){
+    .benefits-grid{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- ============ HERO — no price, just the hook ============ -->
+  <section class="hero">
+    <div class="hero-tag">Gluten-Free · Wheat-Free · Home Baking</div>
+    <h1>Bread you don't have to<br><em>give up</em> anymore</h1>
+    <p>20 real gluten-free bread recipes that come out soft, light, and actually taste like bread — not like a science experiment.</p>
+    <div class="hero-img">
+      <img src="images/quinoa-spinach-bread.jpeg" alt="Gluten-free quinoa and spinach bread">
+    </div>
+    <div class="scroll-cue">
+      Keep scrolling to see what's inside
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- ============ STORY / CREDIBILITY ============ -->
+  <section class="story">
+    <div class="wrap">
+      <div class="section-tag">My Story</div>
+      <h2 class="section-title">Why I started baking gluten-free</h2>
+      <p>I'm Matheus. I started making gluten-free bread for a health reason — I was feeling bloated, tired, and struggling to lose weight, and I realized regular bread was part of the problem.</p>
+      <p>But I didn't want to give up bread completely. It's part of my routine, part of my life. So I started testing gluten-free recipes at home, and honestly, at first it was frustrating — the results were dry, dense, or loaded with ingredients that didn't help at all.</p>
+      <div class="pain-points">
+        <span class="pain-chip">😩 Dry & crumbly</span>
+        <span class="pain-chip">🧱 Too dense</span>
+        <span class="pain-chip">😑 Tastes like cardboard</span>
+        <span class="pain-chip">🛒 Weird ingredients</span>
+      </div>
+      <p>Over time, I learned the right flour combinations and ratios that actually make a soft, light loaf — the kind that helps reduce bloating and keeps hunger in check, instead of working against you.</p>
+      <p>Today I've put everything I learned into one simple, straightforward collection, so anyone can bake gluten-free bread that works — even with zero experience.</p>
+      <p class="signature">I want to show you exactly what worked for me.</p>
+    </div>
+  </section>
+
+  <!-- ============ BENEFITS ============ -->
+  <section>
+    <div class="wrap">
+      <div class="section-tag">Why It's Different</div>
+      <h2 class="section-title">Not just "gluten-free" — actually good</h2>
+      <p class="section-sub">Most gluten-free recipes online are either bland, dense, or full of fillers. These aren't.</p>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="check">✓</div>
+          <div><h4>Soft, light texture</h4><p>The right flour ratios so bread doesn't fall apart or turn into a brick.</p></div>
+        </div>
+        <div class="benefit">
+          <div class="check">✓</div>
+          <div><h4>Simple ingredients</h4><p>No hard-to-find flours or ten-ingredient shopping lists.</p></div>
+        </div>
+        <div class="benefit">
+          <div class="check">✓</div>
+          <div><h4>Beginner-friendly</h4><p>Clear step-by-step instructions, even if you've never baked before.</p></div>
+        </div>
+        <div class="benefit">
+          <div class="check">✓</div>
+          <div><h4>20 different recipes</h4><p>From everyday sandwich loaves to pita, cornbread, and tapioca rolls.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RECIPE PREVIEW ============ -->
+  <section class="story">
+    <div class="wrap">
+      <div class="section-tag">A Sneak Peek</div>
+      <h2 class="section-title">4 of the 20 recipes inside</h2>
+      <div class="recipe-grid">
+        <div class="recipe-card">
+          <img src="images/quinoa-spinach-bread.jpeg" alt="Quinoa and Spinach Bread">
+          <div class="label">Quinoa & Spinach Bread</div>
+        </div>
+        <div class="recipe-card">
+          <img src="images/pita-bread.jpeg" alt="Gluten-Free Pita Bread">
+          <div class="label">Pita Bread</div>
+        </div>
+        <div class="recipe-card">
+          <img src="images/corn-bread.jpeg" alt="Gluten-Free Corn Bread">
+          <div class="label">Corn Bread</div>
+        </div>
+        <div class="recipe-card">
+          <img src="images/tapioca-bread.jpeg" alt="Gluten-Free Tapioca Bread">
+          <div class="label">Tapioca Bread</div>
+        </div>
+        <div class="recipe-more">+ 16 more recipes inside the full collection</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S INSIDE ============ -->
+  <section>
+    <div class="wrap">
+      <div class="section-tag">What You Get</div>
+      <h2 class="section-title">Everything's laid out for you</h2>
+      <div class="inside-list">
+        <ul>
+          <li><span class="bullet">•</span> 20 complete gluten-free bread recipes, ready to follow</li>
+          <li><span class="bullet">•</span> Exact quantities for every ingredient — no guesswork</li>
+          <li><span class="bullet">•</span> Clear, numbered step-by-step preparation method</li>
+          <li><span class="bullet">•</span> A mix of everyday breads, flatbreads, and savory rolls</li>
+          <li><span class="bullet">•</span> Simple, accessible ingredients you can actually find</li>
+          <li><span class="bullet">•</span> Digital format — access it right on your phone or computer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFFER — price appears here, after scroll ============ -->
+  <section>
+    <div class="wrap">
+      <div class="offer">
+        <div class="section-tag">Get Instant Access</div>
+        <h2>20 Gluten-Free Bread Recipes</h2>
+        <p class="offer-sub">Everything I learned, organized into one simple guide — so you don't have to test and fail like I did.</p>
+        <div class="price-row">
+          <span class="price-old">$15</span>
+          <span class="price-new">$5</span>
+        </div>
+        <div class="price-note">One-time payment · instant digital access</div>
+        <a href="CHECKOUT_URL_HERE" class="cta-btn">Get All 20 Recipes Now →</a>
+        <div class="guarantee">🔒 Secure checkout</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section>
+    <div class="wrap">
+      <div class="section-tag">Quick Questions</div>
+      <h2 class="section-title">Before you go...</h2>
+      <div class="faq-item">
+        <h4>Do I need special baking equipment?</h4>
+        <p>No — just a bowl, a loaf pan (or a pan, for a few recipes), and an oven. Nothing fancy.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is this beginner-friendly?</h4>
+        <p>Yes. Every recipe is written in simple steps, even if you've never baked bread before.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I get the recipes after I pay?</h4>
+        <p>You'll get instant digital access right after your purchase is confirmed.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Made with a lot of trial, error, and flour on the floor. 🍞<br>
+    © Gluten-Free Bread Recipes — All rights reserved
+  </footer>
+
+</body>
+</html>
